@@ -1,0 +1,26 @@
+{
+  "name": "npm-native-dropdown",
+  "version": "1.0.1",
+  "description": "The native-dropdown package provides a versatile and customizable dropdown component for React applications. With this package, you can easily integrate dropdown menus into your UI, offering users a seamless way to select options from a list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VijayPalsawdiya/npm-native-dropdown.git"
+  },
+  "author": "VijayPalsawdiya",
+  "keywords": [
+    "npm"
+  ],
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VijayPalsawdiya/npm-native-dropdown/issues"
+  },
+  "homepage": "https://github.com/VijayPalsawdiya/npm-native-dropdown#readme"
+}
