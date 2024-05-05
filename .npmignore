@@ -1,0 +1,31 @@
+# Development files
+.babelrc
+.eslintignore
+.eslintrc.json
+.gitignore
+.npmrc
+.prettierignore
+.prettierrc
+.vscode/
+.idea/
+
+# Build artifacts
+/dist/
+/build/
+/*.js
+/*.css
+/*.map
+
+# Test files
+/test/
+__tests__/
+
+# Documentation and examples
+/docs/
+/examples/
+/assets/
+README.dev.md
+
+# Unused dependencies
+/devDependencies/
+/testDependencies/
