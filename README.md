@@ -31,19 +31,27 @@ or
 
 ## Screenshots
 
-![App Screenshot](https://drive.google.com/file/d/1CzETUhcNBzNyszUQohqr6MjWwO7cAW-O/view?usp=sharing)
-![App Screenshot](https://drive.google.com/file/d/1CzETUhcNBzNyszUQohqr6MjWwO7cAW-O/view?usp=drive_link)
-![App Screenshot](https://drive.google.com/file/d/1QCaxzCOoGbmFtcTCk2fftVVuugaTRJvq/view?usp=drive_link)
-![App Screenshot](https://drive.google.com/file/d/1BOJtjdD6a2XyVMbdTk9xeGDhf7J7hfSr/view?usp=drive_link)
+![App gif](https://github.com/VijayPalsawdiya/npm-native-dropdown/blob/main/src/assets/gif/dropdown.gif)
 
 
-
-## Usage/Examples
+## Array example -
 
 ```javascript
-import Component from 'npm-native-dropdown'
+  const options = [
+    "Heart",
+    "Thumbs Up",
+    "Star",
+    "Smiley",
+  ];
+```
 
-{/* normal */}
+## npm Import -
+```bash
+import DropdownMenu from 'npm-native-dropdown';
+```
+
+## Usage/Examples 1 - Simple 
+```javascript
       <DropdownMenu
         placeHolder={selected ? selected : 'Select Option'}
         options={options}
@@ -51,8 +59,10 @@ import Component from 'npm-native-dropdown'
           console.log('>>>', selectedItem, index);
         }}
       />
+```
 
-{/* with renderitem */}
+## Usage/Examples 2 - With renderitem and renderButton
+```javascript
       <DropdownMenu
         options={options}
         onSelect={(selectedItem: string, index: number) => {
@@ -76,52 +86,8 @@ import Component from 'npm-native-dropdown'
             </TouchableOpacity>)
           })
         }}
-
       />
-
-{/* with icon */}
-      <DropdownMenu
-        placeHolder={selected ? selected : 'Select Option'}
-        options={options}
-        onSelect={(selectedItem: string, index: number) => {
-          console.log('>>>', selectedItem, index);
-        }}
-
-        rightRenderIcon={
-          <Image
-            style={$tinyLogo}
-            source={{
-              uri: 'https://image.png',
-            }}
-          />
-        }
-      />
-
-{/* with both icon */}
-      <DropdownMenu
-        placeHolder={selected ? selected : 'Select Option'}
-        options={options}
-        onSelect={(selectedItem: string, index: number) => {
-          console.log('>>>', selectedItem, index);
-        }}
-        leftRenderIcon={
-          <Image
-            style={$tinyLogo}
-            source={{
-              uri: 'https://image.png',
-            }}
-          />
-        }
-        rightRenderIcon={
-          <Image
-            style={$tinyLogo}
-            source={{
-              uri: 'https://image.png',
-            }}
-          />
-        }
-      />
-
+      
 const $menuItem = (isLast: boolean): ViewStyle => ({
   padding: 12,
   flex: 1,
@@ -148,6 +114,34 @@ const $button: TextStyle = {
   alignItems: 'center',
   justifyContent: 'center',
 }
+```
+
+## Usage/Examples 3 - With Icons 
+#### (Note - You can use any JSX.Element) 
+```javascript
+      <DropdownMenu
+        placeHolder={selected ? selected : 'Select Option'}
+        options={options}
+        onSelect={(selectedItem: string, index: number) => {
+          console.log('>>>', selectedItem, index);
+        }}
+        leftRenderIcon={
+          <Image
+            style={$tinyLogo}
+            source={{
+              uri: 'https://image.png',
+            }}
+          />
+        }
+        rightRenderIcon={
+          <Image
+            style={$tinyLogo}
+            source={{
+              uri: 'https://image.png',
+            }}
+          />
+        }
+      />
 
 const $tinyLogo: ImageStyle = {
   width: 20,
@@ -156,7 +150,6 @@ const $tinyLogo: ImageStyle = {
 ```
 
 ## API Reference
-
 #### Props
 
 | Props     | Params   | isRequire  | Description                |
@@ -177,9 +170,7 @@ const $tinyLogo: ImageStyle = {
 | `dropDownWidth` | `number` | No         |  dropdown width.|
 
 ## Author
-
 - [@VijayPalsawdiya](https://github.com/VijayPalsawdiya)
 
 ## License
-
 [MIT](https://choosealicense.com/licenses/mit/)
