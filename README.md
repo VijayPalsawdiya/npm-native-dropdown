@@ -1,4 +1,3 @@
-
 # npm-native-dropdown
 
 The npm-native-dropdown package provides a versatile and customizable dropdown component for React applications. With this package, you can easily integrate dropdown menus into your UI, offering users a seamless way to select options from a list.
